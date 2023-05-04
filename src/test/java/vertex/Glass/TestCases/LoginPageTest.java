@@ -37,7 +37,14 @@ public void loginPageTitleTest() throws InterruptedException
 	String title = loginPage.validateLoginPageTitle();
 	Assert.assertEquals(title, "Home | ClaimDriver");
 }
-
+@Test(priority=2, enabled=true)
+public void loginPageTitleTest2() throws InterruptedException
+{
+	loginPage.login();
+	
+	String title = loginPage.validateLoginPageTitle();
+	Assert.assertEquals(title, "Login | ClaimDriver");
+}
 //@Test(priority=2, enabled=true)
 //public void loginTest() throws IOException
 //{
